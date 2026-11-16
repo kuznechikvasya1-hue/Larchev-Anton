@@ -47,6 +47,6 @@ while True:
                 print(f"Первая книга: {book_list[0]}")
                 print(f"Последняя книга: {book_list[len(book_list)-1]}")
         else:
-            print("это не число!")
+            print("этого числа нет в списке!")
     elif not choice.isdigit():
-        print("ЭТО НЕ ЧИСЛО")
+        print("это не число!")

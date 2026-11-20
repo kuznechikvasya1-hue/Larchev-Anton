@@ -8,7 +8,7 @@ label.pack(pady=25)
 button_one = tk.Button(root, height=5, width=600, text="ХОМЯК", command=lambda: hamster(1))
 button_one.pack(pady=20)
 
-def hamster(plus):
+def hamster(plus, hamster=hamsters):
     global hamsters
     hamsters += plus
     label.delete("all")

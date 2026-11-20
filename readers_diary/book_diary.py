@@ -4,9 +4,12 @@ def book_add(list_to_add_to):
     list_to_add_to.append(input("напишите название книги: ").strip())
 
 def statistics(list_to_stat):
-    print(f"Всего книг прочитано: {len(list_to_stat)}")
-    print(f"Первая книга: {list_to_stat[0]}")
-    print(f"Последняя книга: {list_to_stat[len(list_to_stat)-1]}")
+    if len(list_to_stat) > 0:
+        print(f"Всего книг прочитано: {len(list_to_stat)}")
+        print(f"Первая книга: {list_to_stat[0]}")
+        print(f"Последняя книга: {list_to_stat[len(list_to_stat)-1]}")
+    else:
+        print("список книг пуст!")
 
 while True:
     print("="*7, "ЧИТАТЕЛЬСКИЙ ДНЕВНИК", "="*7)
@@ -18,7 +21,9 @@ while True:
     print("6 - Статистика")
     print("7 - Удалить книгу")
     print("0 - Выход")
+    print("="*36)
     choice = input("Выберите действие: ")
+
     if choice.isdigit():
         if 0 <= int(choice) <= 7:
             choice = int(choice)
